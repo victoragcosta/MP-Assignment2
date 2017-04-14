@@ -5,7 +5,7 @@
 
 int converter(char *romano)
 {
-	
+	return 0;
 }
 
 #endif
