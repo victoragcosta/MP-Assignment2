@@ -32,6 +32,21 @@ TEST(Converter,CasoEspecialIV){
 	ASSERT_EQ(4, converter((char*)"IV\0")) << "Não foi possível converter o 4: IV";
 }
 
+TEST(Converter,NumerosComX){
+	FILE *dados;
+	int i, valor;
+	char romano[31];
+	dados = fopen("../numeros_romanos.txt", "r");
+	ASSERT_NE((FILE*)NULL, dados) << "Não foi possível abrir conjunto de numeros romanos";
+	
+	for(i = 1; i <= 39; i++){
+		fscanf(dados, "%d: %s", &valor, &romano[0]);
+		EXPECT_EQ(valor, converter(romano)) << "Não foi capaz de converter " << valor << ": " << romano;
+	}
+
+	fclose(dados);
+}
+
 //====Fim Testes====//
 
 int main(int argc, char *argv[])
