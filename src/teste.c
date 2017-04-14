@@ -69,7 +69,7 @@ TEST(Converter,Todos){
 	dados = fopen("../numeros_romanos.txt", "r");
 	ASSERT_NE((FILE*)NULL, dados) << "Não foi possível abrir conjunto de numeros romanos";
 	
-	for(i = 1; i <= 3000; i++){
+	for(i = 1; i <= 3999; i++){
 		fscanf(dados, "%d: %s", &valor, &romano[0]);
 		EXPECT_EQ(valor, converter(romano)) << "Não foi capaz de converter " << valor << ": " << romano;
 	}
