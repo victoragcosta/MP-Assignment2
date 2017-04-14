@@ -18,8 +18,8 @@ int converter(char *romano)
 	valores[2].algarismo = 'X';
 	valores[2].valor = 10;
 
-	valores[3].algarismo = '\0';
-	valores[3].valor = -1;
+	valores[3].algarismo = 'L';
+	valores[3].valor = 50;
 
 	unsigned int i = 0, soma = 0;
 	while(romano[i] != '\0' && i < strlen(romano)){
