@@ -25,7 +25,11 @@ TEST(Converter,AlgarismoI){
 }
 
 TEST(Converter,AlgarismoV){
-	ASSERT_EQ(5, converter((char *)"V")) << "Não foi possível converter o 5: V";
+	ASSERT_EQ(5, converter((char*)"V")) << "Não foi possível converter o 5: V";
+}
+
+TEST(Converter,CasoEspecialIV){
+	ASSERT_EQ(4, converter((char*)"IV")) << "Não foi possível converter o 4: IV";
 }
 
 //====Fim Testes====//
