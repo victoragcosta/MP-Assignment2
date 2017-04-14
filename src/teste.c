@@ -17,8 +17,8 @@ TEST(Converter,AlgarismoI){
 	ASSERT_NE((FILE*)NULL, dados) << "Não foi possível abrir conjunto de numeros romanos";
 	
 	for(i = 1; i <= 3; i++){
-		fscanf(dados, "%d: %[\n]", &valor, romano);
-		ASSERT_EQ(valor, converter(romano)) << "Não foi capaz de converter " << valor;
+		fscanf(dados, "%d: %s", &valor, &romano[0]);
+		EXPECT_EQ(valor, converter(romano)) << "Não foi capaz de converter " << valor;
 	}
 
 	fclose(dados);
