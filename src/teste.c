@@ -18,10 +18,14 @@ TEST(Converter,AlgarismoI){
 	
 	for(i = 1; i <= 3; i++){
 		fscanf(dados, "%d: %s", &valor, &romano[0]);
-		EXPECT_EQ(valor, converter(romano)) << "Não foi capaz de converter " << valor;
+		EXPECT_EQ(valor, converter(romano)) << "Não foi capaz de converter " << valor << ": " << romano;
 	}
 
 	fclose(dados);
+}
+
+TEST(Converter,AlgarismoV){
+	ASSERT_EQ(5, converter((char *)"V")) << "Não foi possível converter o 5: V";
 }
 
 //====Fim Testes====//
