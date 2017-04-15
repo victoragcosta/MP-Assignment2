@@ -7,6 +7,6 @@ Consiste em um algoritmo para a conversão de algarismos romanos para algarismos
 ## Método para a conversão
 
 - Uma tabela ordenada com todos os valores de cada algarismos;
-- Será mantido o valor anterior em uma variável;
-- Quando a próxima for maior que a anterior, se subtrai o valor da anterior na atual;
+- Será mantido o valor sucessor em uma variável;
+- Quando a próxima for maior que a atual, se subtrai o valor da atual na proxima e pula esses caracteres;
 - Somam-se todos os valores.

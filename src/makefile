@@ -1,13 +1,13 @@
 IDIR =../include
 CC=g++
 EXT = c
-CFLAGS= -I $(IDIR) -Wall
+CFLAGS=-Wall -g --coverage -I $(IDIR)
+
 
 ODIR=obj
 LDIR =../lib
 
-GTESTLIBS = /usr/lib/libgtest.a -lgtest -lpthread
-LIBS=$(GTESTLIBS) -lm
+LIBS=-lm /usr/lib/libgtest.a -lgtest -lpthread
 
 _DEPS = romanos.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
@@ -17,12 +17,18 @@ OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
 $(ODIR)/%.o: %.$(EXT) $(DEPS)
-	$(CC) -g -c -o $@ $< $(CFLAGS)
+	$(CC) -c -o $@ $< $(CFLAGS)
 
-teste.exe: $(OBJ)
-	$(CC) -g -o $@ $^ $(CFLAGS) $(LIBS)
+teste: $(OBJ)
+	$(CC) -o $@ $^ $(LIBS) $(CFLAGS)
 
 .PHONY: clean
 
 clean:
 	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~ 
+
+.PHONY: reset
+
+reset:
+	make clean
+	rm -f teste

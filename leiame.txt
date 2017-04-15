@@ -1,0 +1,2 @@
+Para compilar basta rodar o makefile dentro de src usando o comando make.
+make clean deleta os obj.

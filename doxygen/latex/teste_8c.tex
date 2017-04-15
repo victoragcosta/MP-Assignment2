@@ -1,0 +1,156 @@
+\hypertarget{teste_8c}{\section{Referência do Arquivo /mnt/c/\-Users/victo/\-One\-Drive -\/ Universidade de Brasília/\-Un\-B/\-M\-P/\-Trabalho 2 M\-P/mp-\/trab2/src/teste.c}
+\label{teste_8c}\index{/mnt/c/\-Users/victo/\-One\-Drive -\/ Universidade de Brasília/\-Un\-B/\-M\-P/\-Trabalho 2 M\-P/mp-\/trab2/src/teste.\-c@{/mnt/c/\-Users/victo/\-One\-Drive -\/ Universidade de Brasília/\-Un\-B/\-M\-P/\-Trabalho 2 M\-P/mp-\/trab2/src/teste.\-c}}
+}
+
+
+Arquivo com a main e os testes a serem rodados.  
+
+
+{\ttfamily \#include \char`\"{}romanos.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$gtest/gtest.\-h$>$}\\*
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{teste_8c_af69d72a91fd1b1066b4fad7442e97665}{T\-E\-S\-T} (Converter, Vazio)
+\begin{DoxyCompactList}\small\item\em Teste que testa a conversão de um número romano vazio para arábico. \end{DoxyCompactList}\item 
+\hyperlink{teste_8c_af14923f423eaa418291bd973bdfdbfb0}{T\-E\-S\-T} (Converter, Algarismo\-I)
+\begin{DoxyCompactList}\small\item\em Testa para todos os números somente com I. \end{DoxyCompactList}\item 
+\hyperlink{teste_8c_af04178aa48ece1cf6b725621b3220e0b}{T\-E\-S\-T} (Converter, Algarismo\-V)
+\begin{DoxyCompactList}\small\item\em Testa para a adição do algarismo V. \end{DoxyCompactList}\item 
+\hyperlink{teste_8c_a41c7d9c093b75e0e7c55775b4893e9af}{T\-E\-S\-T} (Converter, Caso\-Especial\-I\-V)
+\begin{DoxyCompactList}\small\item\em Testa o mecanismo de detecção de casos em que ocorre a subtração do valor. \end{DoxyCompactList}\item 
+\hyperlink{teste_8c_ab6410bfd93ad4f1d7fa9c1f5705ed446}{T\-E\-S\-T} (Converter, Numeros\-Com\-X)
+\begin{DoxyCompactList}\small\item\em Testa a capacidade de conversão de números com algarismos I, V e X. \end{DoxyCompactList}\item 
+\hyperlink{teste_8c_a335f6a7ced6647085d3ea1837d9c5871}{T\-E\-S\-T} (Converter, Numeros\-Com\-L)
+\begin{DoxyCompactList}\small\item\em Testa uma quantidade maior de números contendo I, V, X e L. \end{DoxyCompactList}\item 
+\hyperlink{teste_8c_ac2a764a021f90052ee84bb40dd80adde}{T\-E\-S\-T} (Converter, Todos)
+\begin{DoxyCompactList}\small\item\em Testa todos os números romanos até 3999. \end{DoxyCompactList}\item 
+int \hyperlink{teste_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função main que coloca os testes a funcionar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Arquivo com a main e os testes a serem rodados. 
+
+\subsection{Funções}
+\hypertarget{teste_8c_a0ddf1224851353fc92bfbff6f499fa97}{\index{teste.\-c@{teste.\-c}!main@{main}}
+\index{main@{main}!teste.c@{teste.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{teste_8c_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+Função main que coloca os testes a funcionar. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em argc} & Inteiro com a quantidade de argumentos passados na prompt de comando. \\
+\hline
+{\em argv} & Vetor de ponteiro pra char contendo todos os argumentos passados pela prompt de comando. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inteiro retornando códigos de erro ou 0, quando for bem sucedido. 
+\end{DoxyReturn}
+\hypertarget{teste_8c_af69d72a91fd1b1066b4fad7442e97665}{\index{teste.\-c@{teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!teste.c@{teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Converter}]{, }
+\item[{Vazio}]{}
+\end{DoxyParamCaption}
+)}}\label{teste_8c_af69d72a91fd1b1066b4fad7442e97665}
+
+
+Teste que testa a conversão de um número romano vazio para arábico. 
+
+A função deve retornar 0 para passar no teste. \hypertarget{teste_8c_af14923f423eaa418291bd973bdfdbfb0}{\index{teste.\-c@{teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!teste.c@{teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Converter}]{, }
+\item[{Algarismo\-I}]{}
+\end{DoxyParamCaption}
+)}}\label{teste_8c_af14923f423eaa418291bd973bdfdbfb0}
+
+
+Testa para todos os números somente com I. 
+
+O teste pega os 3 primeiros números da tabela de todos os romanos e os testa. São eles I, I\-I e I\-I\-I. Para passar devem retornar 1, 2 e 3 respectivamente.
+
+O teste serve para ver a funcionalidade do mecanismo de soma dos valores da função converte. \hypertarget{teste_8c_af04178aa48ece1cf6b725621b3220e0b}{\index{teste.\-c@{teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!teste.c@{teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Converter}]{, }
+\item[{Algarismo\-V}]{}
+\end{DoxyParamCaption}
+)}}\label{teste_8c_af04178aa48ece1cf6b725621b3220e0b}
+
+
+Testa para a adição do algarismo V. 
+
+Para passar a função converter deve retornar 5.
+
+O teste objetiva observar os padrões de uma tabela de valores na função converter, para facilitar em testes futuros a generalização. \hypertarget{teste_8c_a41c7d9c093b75e0e7c55775b4893e9af}{\index{teste.\-c@{teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!teste.c@{teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Converter}]{, }
+\item[{Caso\-Especial\-I\-V}]{}
+\end{DoxyParamCaption}
+)}}\label{teste_8c_a41c7d9c093b75e0e7c55775b4893e9af}
+
+
+Testa o mecanismo de detecção de casos em que ocorre a subtração do valor. 
+
+Para passar a função converter deve retornar 4.
+
+Esse teste vê testa a função converter afim de ver a capacidade da função de fazer com o caso mais simples de subtração nos romanos. \hypertarget{teste_8c_ab6410bfd93ad4f1d7fa9c1f5705ed446}{\index{teste.\-c@{teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!teste.c@{teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Converter}]{, }
+\item[{Numeros\-Com\-X}]{}
+\end{DoxyParamCaption}
+)}}\label{teste_8c_ab6410bfd93ad4f1d7fa9c1f5705ed446}
+
+
+Testa a capacidade de conversão de números com algarismos I, V e X. 
+
+Para passar deve retornar números iguais aos da tabela em numeros\-\_\-romanos.\-txt.
+
+Esse teste visou auxiliar no desenvolvimento de condicionais para uma lista relacional mais genérica, facilitando a expansão posterior. Ela também auxilia na generalização do caso especial de subtração. \hypertarget{teste_8c_a335f6a7ced6647085d3ea1837d9c5871}{\index{teste.\-c@{teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!teste.c@{teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Converter}]{, }
+\item[{Numeros\-Com\-L}]{}
+\end{DoxyParamCaption}
+)}}\label{teste_8c_a335f6a7ced6647085d3ea1837d9c5871}
+
+
+Testa uma quantidade maior de números contendo I, V, X e L. 
+
+Para passar deve retornar números iguais aos da tabela em numeros\-\_\-romanos.\-txt.
+
+Esse teste visa auxiliar na expansão da tabela e também a verificar se o desenvolvimento de casos especiais estava conseguindo generalizar para outros números. \hypertarget{teste_8c_ac2a764a021f90052ee84bb40dd80adde}{\index{teste.\-c@{teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!teste.c@{teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Converter}]{, }
+\item[{Todos}]{}
+\end{DoxyParamCaption}
+)}}\label{teste_8c_ac2a764a021f90052ee84bb40dd80adde}
+
+
+Testa todos os números romanos até 3999. 
+
+Para passar deve retornar números iguais aos da tabela em numeros\-\_\-romanos.\-txt.
+
+Este era o teste final para ver se a conversão realmente funcionava. Passando esse teste, basta desenvolver para tratar números inválidos. 
