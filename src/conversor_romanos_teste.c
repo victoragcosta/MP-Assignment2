@@ -10,8 +10,7 @@
 	A função deve retornar 0 para passar no teste.
 */
 TEST(Converter,Vazio){
-	char romano[]="";
-	ASSERT_EQ(0, Converter(romano)) << "Não reconhece o 0";
+	ASSERT_EQ(0, Converter((char*)"\0")) << "Não reconhece o 0";
 }
 
 /**
@@ -47,7 +46,7 @@ TEST(Converter,AlgarismoI){
 	testes futuros a generalização.
 */
 TEST(Converter,AlgarismoV){
-	ASSERT_EQ(5, Converter((char*)"V\0")) << "Não foi possível Converter o 5: V";
+	ASSERT_EQ(5, Converter((char*)"V")) << "Não foi possível Converter o 5: V";
 }
 
 /**
@@ -58,7 +57,7 @@ TEST(Converter,AlgarismoV){
 	de fazer com o caso mais simples de subtração nos romanos.
 */
 TEST(Converter,CasoEspecialIV){
-	ASSERT_EQ(4, Converter((char*)"IV\0")) << "Não foi possível Converter o 4: IV";
+	ASSERT_EQ(4, Converter((char*)"IV")) << "Não foi possível Converter o 4: IV";
 }
 
 /**
@@ -131,7 +130,7 @@ TEST(Converter,Todos){
 }
 
 TEST(Converter,NumerosLowerCase){
-	char romano4[]="iV\0", romano14[]="Xiv\0";
+	char romano4[]="iV", romano14[]="Xiv";
 	EXPECT_EQ(4, Converter(romano4));
 	EXPECT_EQ(14, Converter(romano14));
 }

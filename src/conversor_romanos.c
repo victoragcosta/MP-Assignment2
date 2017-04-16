@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <ctype.h> //toupper()
 #include <stdlib.h>
 #include <string.h>
 #include "conversor_romanos.h"
@@ -79,8 +79,7 @@ int CriarTabela(Tabela **relacao)
 	return registro_buffer;   //retorna tamanho
 }
 
-/**
-	Essa função gera um arquivo .txt relacionando o algarismo romano
+/**	Essa função gera um arquivo .txt relacionando o algarismo romano
 	com o valor dele. Ele faz isso lendo a partir de uma Tabela com
 	3999 números romanos e achando os que contém apenas 1 letra, tendo
 	assim o valor verdadeiro do algarismo romano.
@@ -88,7 +87,7 @@ int CriarTabela(Tabela **relacao)
 	\param maior_num Valor inteiro dizendo qual o maior número a ser olhado na lista.
 	\return Nada.
 */
- void DescobrirTabela(FILE *fp, int maior_num)
+void DescobrirTabela(FILE *fp, int maior_num)
 {
 	int indice_linha, valor;
 	char recebido[50];
@@ -111,16 +110,14 @@ int CriarTabela(Tabela **relacao)
 	fclose(arquivo_relacao);
 }
 
-/**
-	Testa se o índice aponta para o fim da string.
+/**	Testa se o índice aponta para o fim da string.
 	\param posicao Um valor inteiro representando o índice da string.
 	\param romano Ponteiro para char atuando como uma string.
 	\return Um inteiro representando verdadeiro ou falso.
 */
 int FimDaString(int posicao, char *romano){return (unsigned int)posicao >= strlen(romano);}
 
-/**
-	Testa se o caracter atual e o próximo formam
+/**	Testa se o caracter atual e o próximo formam
 	um caso de subtração dos algarismos romanos.
 	Ele checa se o proximo tem valor maior que o anterior.
 	\param relacao A Tabela relacionando algarismos romanos com os valores deles.
@@ -136,8 +133,7 @@ int CasoEspecial(Tabela *relacao, int tamanho_relacao, char atual, char proximo)
 	return valor_atual < valor_prox;
 }
 
-/**
-	Acha o valor correspondente ao algarismo romano passado.
+/**	Acha o valor correspondente ao algarismo romano passado.
 	\param algarismo Algarismo da qual se quer o valor correspondente.
 	\param relacao Tabela contendo as relações entre algarismo e valor.
 	\param tamanho_relacao Comprimento da Tabela relacional.
@@ -146,6 +142,7 @@ int CasoEspecial(Tabela *relacao, int tamanho_relacao, char atual, char proximo)
 int FindAlgarismo(char algarismo, Tabela *relacao, int tamanho_relacao)
 {
 	int i = 0;
+	algarismo = toupper(algarismo);
 	while(i < tamanho_relacao && relacao[i].algarismo != algarismo)  //percorre a lista toda ou até achar o algarismo na lista.
 		i++;
 	if(relacao[i].algarismo == algarismo)  //testa se realmente é o valor procurado, poderia ter sido apenas o fim da lista.
