@@ -1,4 +1,4 @@
-#include "romanos.h"
+#include "conversor_romanos.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <gtest/gtest.h>
@@ -11,7 +11,7 @@
 */
 TEST(Converter,Vazio){
 	char romano[]="";
-	ASSERT_EQ(0, converter(romano)) << "Não reconhece o 0";
+	ASSERT_EQ(0, Converter(romano)) << "Não reconhece o 0";
 }
 
 /**
@@ -32,7 +32,7 @@ TEST(Converter,AlgarismoI){
 	
 	for(i = 1; i <= 3; i++){
 		fscanf(dados, "%d: %s", &valor, &romano[0]);
-		EXPECT_EQ(valor, converter(romano)) << "Não foi capaz de converter " << valor << ": " << romano;
+		EXPECT_EQ(valor, Converter(romano)) << "Não foi capaz de Converter " << valor << ": " << romano;
 	}
 
 	fclose(dados);
@@ -40,25 +40,25 @@ TEST(Converter,AlgarismoI){
 
 /**
 	Testa para a adição do algarismo V.
-	Para passar a função converter deve retornar 5.
+	Para passar a função Converter deve retornar 5.
 
 	O teste objetiva observar os padrões de uma tabela
-	de valores na função converter, para facilitar em
+	de valores na função Converter, para facilitar em
 	testes futuros a generalização.
 */
 TEST(Converter,AlgarismoV){
-	ASSERT_EQ(5, converter((char*)"V\0")) << "Não foi possível converter o 5: V";
+	ASSERT_EQ(5, Converter((char*)"V\0")) << "Não foi possível Converter o 5: V";
 }
 
 /**
 	Testa o mecanismo de detecção de casos em que ocorre a subtração do valor.
-	Para passar a função converter deve retornar 4.
+	Para passar a função Converter deve retornar 4.
 
-	Esse teste vê testa a função converter afim de ver a capacidade da função
+	Esse teste vê testa a função Converter afim de ver a capacidade da função
 	de fazer com o caso mais simples de subtração nos romanos.
 */
 TEST(Converter,CasoEspecialIV){
-	ASSERT_EQ(4, converter((char*)"IV\0")) << "Não foi possível converter o 4: IV";
+	ASSERT_EQ(4, Converter((char*)"IV\0")) << "Não foi possível Converter o 4: IV";
 }
 
 /**
@@ -78,7 +78,7 @@ TEST(Converter,NumerosComX){
 	
 	for(i = 1; i <= 39; i++){
 		fscanf(dados, "%d: %s", &valor, &romano[0]);
-		EXPECT_EQ(valor, converter(romano)) << "Não foi capaz de converter " << valor << ": " << romano;
+		EXPECT_EQ(valor, Converter(romano)) << "Não foi capaz de Converter " << valor << ": " << romano;
 	}
 
 	fclose(dados);
@@ -102,7 +102,7 @@ TEST(Converter,NumerosComL){
 	
 	for(i = 1; i <= 89; i++){
 		fscanf(dados, "%d: %s", &valor, &romano[0]);
-		EXPECT_EQ(valor, converter(romano)) << "Não foi capaz de converter " << valor << ": " << romano;
+		EXPECT_EQ(valor, Converter(romano)) << "Não foi capaz de Converter " << valor << ": " << romano;
 	}
 
 	fclose(dados);
@@ -124,7 +124,7 @@ TEST(Converter,Todos){
 	
 	for(i = 1; i <= 3999; i++){
 		fscanf(dados, "%d: %s", &valor, &romano[0]);
-		EXPECT_EQ(valor, converter(romano)) << "Não foi capaz de converter " << valor << ": " << romano;
+		EXPECT_EQ(valor, Converter(romano)) << "Não foi capaz de Converter " << valor << ": " << romano;
 	}
 
 	fclose(dados);
