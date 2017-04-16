@@ -130,6 +130,12 @@ TEST(Converter,Todos){
 	fclose(dados);
 }
 
+TEST(Converter,NumerosLowerCase){
+	char romano4[]="iV\0", romano14[]="Xiv\0";
+	EXPECT_EQ(4, Converter(romano4));
+	EXPECT_EQ(14, Converter(romano14));
+}
+
 //====Fim Testes====//
 
 /**

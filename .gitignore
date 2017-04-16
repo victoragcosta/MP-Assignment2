@@ -1,2 +1,6 @@
 *.o
 *.exe
+*.gcda
+*.gcno
+*.gcov
+src/conversor_romanos_teste
