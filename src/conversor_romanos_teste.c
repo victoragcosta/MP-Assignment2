@@ -143,6 +143,28 @@ TEST(Converter,NumerosLowerCase){
   EXPECT_EQ(14, Converter(romano14));
 }
 
+/**
+  Testa se a função retornará -1 para entradas inválidas.
+  Para passar basta retornar -1 para todas as entradas.
+
+  Este teste garante que o programa seja mais robusto
+  quanto as entradas da função converter.
+*/
+TEST(Converter, Invalidos){
+  FILE *dados;
+  int i;
+  char romano[31];
+  dados = fopen("../entradas_invalidas.txt", "r");
+  ASSERT_NE((FILE*)NULL, dados) << "Não foi possível abrir conjunto de numeros romanos inválidos";
+  
+  for(i = 1; i <= 7; i++){
+    fscanf(dados, "%s", &romano[0]);
+    EXPECT_EQ(-1, Converter(romano)) << "Não foi capaz de retornar -1 para: " << romano;
+  }
+
+  fclose(dados);
+}
+
 //====Fim Testes====//
 
 /**
