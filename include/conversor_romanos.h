@@ -12,15 +12,17 @@
   e etc.
 */
 typedef struct TpTabela{
-  int valor;        /**<Valor do algarismo romano.*/
+  int valor;        /**<Valor correspondente da notação arábica do algarismo romano.*/
   char algarismo;     /**<Algarismo romano.*/
 }Tabela;
 
-int Converter(char *romano);                            /**<Função que converte um número romano em arábico.*/
-int CriarTabela(Tabela **relacao);                          /**<Gera a tabela de relacionamentos romano arábico.*/
-void DescobrirTabela(FILE *fp, int maior_num);                    /**<Gera um .txt com as relações diretas de romano e arábico.*/
-int FimDaString(int posicao, char *romano);                     /**<Checa se é índice é fim da string passada.*/
-int CasoEspecial(Tabela* relacao, int tamanho_relacao, char atual, char proximo); /**<Checa se os dois algarismos consecutivos fazem um caso especial.*/
-int FindAlgarismo(char algarismo, Tabela *relacao, int tamanho);          /**<Acha a existencia do algarismo na tabela e retorna o valor correspondente.*/
+int Converter(char *romano);  /**<Função que converte um número romano em arábico.*/
+int CriarTabela(Tabela **relacao);  /**<Gera a tabela de relacionamentos romano arábico.*/
+void DescobrirTabela(FILE *fp, int maior_num);  /**<Gera um .txt com as relações diretas de romano e arábico.*/
+int FimDaString(int posicao, char *romano);  /**<Checa se é índice é fim da string passada.*/
+int CasoEspecial(Tabela* relacao, int tamanho_relacao, char atual, char proximo);  /**<Checa se os dois algarismos consecutivos fazem um caso especial.*/
+int FindAlgarismo(char algarismo, Tabela *relacao, int tamanho_relacao);  /**<Acha a existencia do algarismo na tabela e retorna o valor correspondente.*/
+int FindIndice(char algarismo, Tabela *relacao, int tamanho_relacao);  /**<Retorna o indice da posição do algarismo procurado.*/
+int ValidarNumeroRomano(char *romano);  /**<Confirma a validade do número romano.*/
 
 #endif

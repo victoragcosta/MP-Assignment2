@@ -1,4 +1,5 @@
-#include <ctype.h> //toupper()
+#include <ctype.h>  //toupper()
+#include <math.h>  //ceil()
 #include <stdlib.h>
 #include <string.h>
 #include "conversor_romanos.h"
@@ -8,12 +9,15 @@ int kTamanhoValores = CriarTabela(&kValores);  //guarda-se o tamanho
 
 /** Converte os algarismos de romano para arábico.
   \param romano ponteiro para char (atuando como string) contendo o número romano que se deseja converter.
-  \return o valor inteiro do número romano. Retorna -1 se não for valor romano válido.
+  \return o valor inteiro do número romano. Retorna -1 se não for valor romano válido. Retorna 0 para string vazia.
  */
 int Converter(char *romano)
 {
   if(kValores == NULL)  //se não tiver a tabela, a função não tem como funcionar
     exit(4);  //fecha o programa
+
+  if(!ValidarNumeroRomano(romano))
+    return -1;
 
   unsigned int indice_letra = 0, soma = 0;
   while(indice_letra < strlen(romano) && romano[indice_letra] != '\0'){  //itera até o fim da string do número romano
@@ -145,9 +149,100 @@ int FindAlgarismo(char algarismo, Tabela *relacao, int tamanho_relacao)
   algarismo = toupper(algarismo);
   while(i < tamanho_relacao && relacao[i].algarismo != algarismo)  //percorre a lista toda ou até achar o algarismo na lista.
     i++;
-  if(relacao[i].algarismo == algarismo)  //testa se realmente é o valor procurado, poderia ter sido apenas o fim da lista.
+  if(relacao[i].algarismo == algarismo)  //testa se realmente é o algarismo procurado, poderia ter sido apenas o fim da lista.
     return relacao[i].valor;  //retorna o valor do algarismo.
   return -1;  //retorna -1 se não houver valor
+}
+
+/** Acha o valor correspondente ao algarismo romano passado.
+  \param algarismo Algarismo da qual se quer o indice da posição correspondente.
+  \param relacao Tabela contendo as relações entre algarismo e valor.
+  \param tamanho_relacao Comprimento da Tabela relacional.
+  \return Retorna o indice da posição do algarismo passado na tabela. Retorna -1 se não existir na Tabela.
+*/
+int FindIndice(char algarismo, Tabela *relacao, int tamanho_relacao)
+{
+  int indice_tabela = 0;
+  algarismo = toupper(algarismo);
+  while(indice_tabela < tamanho_relacao && relacao[indice_tabela].algarismo != algarismo)  //percorre a lista toda ou até achar o algarismo na lista.
+    indice_tabela++;
+  if(relacao[indice_tabela].algarismo == algarismo)  //testa se realmente é o algarismo procurado, poderia ter sido apenas o fim da lista.
+    return indice_tabela;  //retorna a posição na tabela do algarismo.
+  return -1;  //retorna -1 se não houver algarismo
+}
+
+/**
+  Analiza uma string de números romanos para ver se é válido.
+  \param romano ponteiro para char representando uma string de um número romano. Tamanho máximo do vetor: 31.
+  \return 1 para romano válido, 0 para romano inválido.
+*/
+int ValidarNumeroRomano(char *romano)
+{
+  if(strlen(romano) == 0)
+    return 1;
+
+  char verificado[31], nao_verificado[31];
+  char char_atual;
+  int indice_atual;
+
+  verificado[0] = '\0';
+  strcpy(nao_verificado, romano);
+  for(indice_atual = 0; (unsigned int)indice_atual < strlen(nao_verificado); indice_atual++){
+    
+    char_atual = nao_verificado[indice_atual];
+    
+    if(FindAlgarismo(char_atual, kValores, kTamanhoValores) < 0){  //Não faz parte dos algarismos romanos
+      return 0;
+    }
+
+    //Teste para repetição:
+    if(indice_atual - 1 >= 0 && verificado[indice_atual-1] == char_atual){//Testa primeira repetição
+      if(FindIndice(char_atual, kValores, kTamanhoValores) % 2 == 1)  //Somente alguns algarismos podem repetir
+        return 0;
+      if(indice_atual - 2 >= 0 && indice_atual - 3 >= 0  //Garante que não acessará áreas proibidas da memória
+        && verificado[indice_atual-2] == char_atual && verificado[indice_atual-3] == char_atual)  //só pode repetir 3 vezes
+        return 0;
+    }
+
+    if(indice_atual - 1 >= 0  //Garante não acessar o -1
+      && FindAlgarismo(verificado[indice_atual-1], kValores, kTamanhoValores)
+      < FindAlgarismo(nao_verificado[indice_atual], kValores, kTamanhoValores))  //Anterior menor
+    {
+      if(FindIndice(verificado[indice_atual-1], kValores, kTamanhoValores)
+        != ceil((FindIndice(nao_verificado[indice_atual], kValores, kTamanhoValores)-1)/2)*2)
+          return 0;
+
+      if(indice_atual - 2 >= 0
+        && FindAlgarismo(verificado[indice_atual-2], kValores, kTamanhoValores)
+        < FindAlgarismo(nao_verificado[indice_atual], kValores, kTamanhoValores))
+          return 0;
+
+    }
+
+    if(indice_atual - 1 >= 0
+      && FindAlgarismo(verificado[indice_atual-1], kValores, kTamanhoValores)
+      > FindAlgarismo(nao_verificado[indice_atual], kValores, kTamanhoValores))
+    {
+      if(indice_atual - 2 >= 0
+        && FindAlgarismo(verificado[indice_atual-2], kValores, kTamanhoValores)
+        <= FindAlgarismo(nao_verificado[indice_atual], kValores, kTamanhoValores))
+          return 0;
+    }
+
+    if(indice_atual - 2 >= 0
+      && FindAlgarismo(verificado[indice_atual-2], kValores, kTamanhoValores)
+       < FindAlgarismo(verificado[indice_atual-1], kValores, kTamanhoValores)
+      && FindAlgarismo(nao_verificado[indice_atual], kValores, kTamanhoValores)
+       >= FindAlgarismo(verificado[indice_atual-1], kValores, kTamanhoValores))
+      return 0;
+
+    verificado[indice_atual] = nao_verificado[indice_atual];
+    verificado[indice_atual+1] = '\0';
+
+  }
+
+
+  return 1; 
 }
 
 /**
