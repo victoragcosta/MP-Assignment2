@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Conversor de Numeros Romanos: Referência do Arquivo /mnt/c/Users/victo/OneDrive - Universidade de Brasília/UnB/MP/Trabalho 2 MP/mp-trab2/src/conversor_romanos.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Conversor de Numeros Romanos
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Estruturas de Dados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a> &#124;
+<a href="#var-members">Variáveis</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo conversor_romanos.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Pacote de funções para Converter números romanos em arábicos.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;ctype.h&gt;</code><br/>
+<code>#include &lt;math.h&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &quot;conversor_romanos.h&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:af7191b221057d95be0fac40f667669da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conversor__romanos_8c.html#af7191b221057d95be0fac40f667669da">Converter</a> (char *romano)</td></tr>
+<tr class="memdesc:af7191b221057d95be0fac40f667669da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converte os algarismos de romano para arábico.  <a href="#af7191b221057d95be0fac40f667669da">Mais...</a><br/></td></tr>
+<tr class="separator:af7191b221057d95be0fac40f667669da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207d674017dfa63b4a7ec1871911f8fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conversor__romanos_8c.html#a207d674017dfa63b4a7ec1871911f8fa">CriarTabela</a> (<a class="el" href="structTpTabela.html">Tabela</a> **relacao)</td></tr>
+<tr class="memdesc:a207d674017dfa63b4a7ec1871911f8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aloca em memória uma lista com as relações entre todos os algarismos romanos com arábicos.  <a href="#a207d674017dfa63b4a7ec1871911f8fa">Mais...</a><br/></td></tr>
+<tr class="separator:a207d674017dfa63b4a7ec1871911f8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a298f6ef87ccd00e47e8acd41474e5eef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conversor__romanos_8c.html#a298f6ef87ccd00e47e8acd41474e5eef">DescobrirTabela</a> (FILE *fp, int maior_num)</td></tr>
+<tr class="memdesc:a298f6ef87ccd00e47e8acd41474e5eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Essa função gera um arquivo .txt relacionando o algarismo romano com o valor dele.  <a href="#a298f6ef87ccd00e47e8acd41474e5eef">Mais...</a><br/></td></tr>
+<tr class="separator:a298f6ef87ccd00e47e8acd41474e5eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b3ed6c3ec6196a62c8fea5c1cb9790"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conversor__romanos_8c.html#a32b3ed6c3ec6196a62c8fea5c1cb9790">FimDaString</a> (int posicao, char *romano)</td></tr>
+<tr class="memdesc:a32b3ed6c3ec6196a62c8fea5c1cb9790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa se o índice aponta para o fim da string.  <a href="#a32b3ed6c3ec6196a62c8fea5c1cb9790">Mais...</a><br/></td></tr>
+<tr class="separator:a32b3ed6c3ec6196a62c8fea5c1cb9790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e205d170f71b8986017aa17e3f34707"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conversor__romanos_8c.html#a7e205d170f71b8986017aa17e3f34707">CasoEspecial</a> (<a class="el" href="structTpTabela.html">Tabela</a> *relacao, int tamanho_relacao, char atual, char proximo)</td></tr>
+<tr class="memdesc:a7e205d170f71b8986017aa17e3f34707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa se o caracter atual e o próximo formam um caso de subtração dos algarismos romanos.  <a href="#a7e205d170f71b8986017aa17e3f34707">Mais...</a><br/></td></tr>
+<tr class="separator:a7e205d170f71b8986017aa17e3f34707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404a63fb907ab151ced60365813f2f62"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conversor__romanos_8c.html#a404a63fb907ab151ced60365813f2f62">FindAlgarismo</a> (char algarismo, <a class="el" href="structTpTabela.html">Tabela</a> *relacao, int tamanho_relacao)</td></tr>
+<tr class="memdesc:a404a63fb907ab151ced60365813f2f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acha o valor correspondente ao algarismo romano passado.  <a href="#a404a63fb907ab151ced60365813f2f62">Mais...</a><br/></td></tr>
+<tr class="separator:a404a63fb907ab151ced60365813f2f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a152dda4505bb92ff445728b4006c5858"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conversor__romanos_8c.html#a152dda4505bb92ff445728b4006c5858">FindIndice</a> (char algarismo, <a class="el" href="structTpTabela.html">Tabela</a> *relacao, int tamanho_relacao)</td></tr>
+<tr class="memdesc:a152dda4505bb92ff445728b4006c5858"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acha o valor correspondente ao algarismo romano passado.  <a href="#a152dda4505bb92ff445728b4006c5858">Mais...</a><br/></td></tr>
+<tr class="separator:a152dda4505bb92ff445728b4006c5858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f000f0c241026639558374ea97b00b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conversor__romanos_8c.html#ad5f000f0c241026639558374ea97b00b">ValidarNumeroRomano</a> (char *romano)</td></tr>
+<tr class="memdesc:ad5f000f0c241026639558374ea97b00b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analiza uma string de números romanos para ver se é válido.  <a href="#ad5f000f0c241026639558374ea97b00b">Mais...</a><br/></td></tr>
+<tr class="separator:ad5f000f0c241026639558374ea97b00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:a6b709955f14a5882ea62626a1b421697"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structTpTabela.html">Tabela</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conversor__romanos_8c.html#a6b709955f14a5882ea62626a1b421697">kValores</a> = NULL</td></tr>
+<tr class="memdesc:a6b709955f14a5882ea62626a1b421697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Armazena a Tabela que relaciona caracter romano com seu valor arábico.  <a href="#a6b709955f14a5882ea62626a1b421697">Mais...</a><br/></td></tr>
+<tr class="separator:a6b709955f14a5882ea62626a1b421697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cfd2c8e297786b4f33527bd79e8e937"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conversor__romanos_8c.html#a8cfd2c8e297786b4f33527bd79e8e937">kTamanhoValores</a> = <a class="el" href="conversor__romanos_8c.html#a207d674017dfa63b4a7ec1871911f8fa">CriarTabela</a>(&amp;<a class="el" href="conversor__romanos_8c.html#a6b709955f14a5882ea62626a1b421697">kValores</a>)</td></tr>
+<tr class="memdesc:a8cfd2c8e297786b4f33527bd79e8e937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Armazena-se o tamanho da tabela para facilitar iteração.  <a href="#a8cfd2c8e297786b4f33527bd79e8e937">Mais...</a><br/></td></tr>
+<tr class="separator:a8cfd2c8e297786b4f33527bd79e8e937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Pacote de funções para Converter números romanos em arábicos. </p>
+</div><h2 class="groupheader">Funções</h2>
+<a class="anchor" id="a7e205d170f71b8986017aa17e3f34707"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CasoEspecial </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structTpTabela.html">Tabela</a> *&#160;</td>
+          <td class="paramname"><em>relacao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tamanho_relacao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>atual</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>proximo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Testa se o caracter atual e o próximo formam um caso de subtração dos algarismos romanos. </p>
+<p>Checa se os dois algarismos consecutivos fazem um caso especial.</p>
+<p>Ele checa se o proximo tem valor maior que o anterior. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">relacao</td><td>A Tabela relacionando algarismos romanos com os valores deles. </td></tr>
+    <tr><td class="paramname">tamanho_relacao</td><td>Comprimento da Tabela. </td></tr>
+    <tr><td class="paramname">atual</td><td>Caracter que vem antes. </td></tr>
+    <tr><td class="paramname">proximo</td><td>Caracter que vem depois. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Um inteiro representando verdadeiro ou falso. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af7191b221057d95be0fac40f667669da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Converter </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>romano</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converte os algarismos de romano para arábico. </p>
+<p>Função que converte um número romano em arábico.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">romano</td><td>ponteiro para char (atuando como string) contendo o número romano que se deseja converter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>o valor inteiro do número romano. Retorna -1 se não for valor romano válido. Retorna 0 para string vazia. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a207d674017dfa63b4a7ec1871911f8fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CriarTabela </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structTpTabela.html">Tabela</a> **&#160;</td>
+          <td class="paramname"><em>relacao</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aloca em memória uma lista com as relações entre todos os algarismos romanos com arábicos. </p>
+<p>Gera a tabela de relacionamentos romano arábico.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">relacao</td><td>o endereço de memória de um ponteiro de Tabela. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>o tamanho da Tabela criada. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a298f6ef87ccd00e47e8acd41474e5eef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DescobrirTabela </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maior_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Essa função gera um arquivo .txt relacionando o algarismo romano com o valor dele. </p>
+<p>Gera um .txt com as relações diretas de romano e arábico.</p>
+<p>Ele faz isso lendo a partir de uma Tabela com 3999 números romanos e achando os que contém apenas 1 letra, tendo assim o valor verdadeiro do algarismo romano. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fp</td><td>Ponteiro para arquivo contendo o arquivo aberto com 3999 números romanos. </td></tr>
+    <tr><td class="paramname">maior_num</td><td>Valor inteiro dizendo qual o maior número a ser olhado na lista. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a32b3ed6c3ec6196a62c8fea5c1cb9790"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FimDaString </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>posicao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>romano</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Testa se o índice aponta para o fim da string. </p>
+<p>Checa se é índice é fim da string passada.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">posicao</td><td>Um valor inteiro representando o índice da string. </td></tr>
+    <tr><td class="paramname">romano</td><td>Ponteiro para char atuando como uma string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Um inteiro representando verdadeiro ou falso. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a404a63fb907ab151ced60365813f2f62"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FindAlgarismo </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>algarismo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structTpTabela.html">Tabela</a> *&#160;</td>
+          <td class="paramname"><em>relacao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tamanho_relacao</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Acha o valor correspondente ao algarismo romano passado. </p>
+<p>Acha a existencia do algarismo na tabela e retorna o valor correspondente.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">algarismo</td><td>Algarismo da qual se quer o valor correspondente. </td></tr>
+    <tr><td class="paramname">relacao</td><td>Tabela contendo as relações entre algarismo e valor. </td></tr>
+    <tr><td class="paramname">tamanho_relacao</td><td>Comprimento da Tabela relacional. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o valor do algarismo passado. Retorna -1 se não existir na Tabela. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a152dda4505bb92ff445728b4006c5858"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FindIndice </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>algarismo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structTpTabela.html">Tabela</a> *&#160;</td>
+          <td class="paramname"><em>relacao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tamanho_relacao</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Acha o valor correspondente ao algarismo romano passado. </p>
+<p>Retorna o indice da posição do algarismo procurado.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">algarismo</td><td>Algarismo da qual se quer o indice da posição correspondente. </td></tr>
+    <tr><td class="paramname">relacao</td><td>Tabela contendo as relações entre algarismo e valor. </td></tr>
+    <tr><td class="paramname">tamanho_relacao</td><td>Comprimento da Tabela relacional. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o indice da posição do algarismo passado na tabela. Retorna -1 se não existir na Tabela. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad5f000f0c241026639558374ea97b00b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ValidarNumeroRomano </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>romano</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Analiza uma string de números romanos para ver se é válido. </p>
+<p>Confirma a validade do número romano.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">romano</td><td>ponteiro para char representando uma string de um número romano. Tamanho máximo do vetor: 31. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>1 para romano válido, 0 para romano inválido. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variáveis</h2>
+<a class="anchor" id="a8cfd2c8e297786b4f33527bd79e8e937"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kTamanhoValores = <a class="el" href="conversor__romanos_8c.html#a207d674017dfa63b4a7ec1871911f8fa">CriarTabela</a>(&amp;<a class="el" href="conversor__romanos_8c.html#a6b709955f14a5882ea62626a1b421697">kValores</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Armazena-se o tamanho da tabela para facilitar iteração. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6b709955f14a5882ea62626a1b421697"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structTpTabela.html">Tabela</a>* kValores = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Armazena a Tabela que relaciona caracter romano com seu valor arábico. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sábado, 22 de Abril de 2017 02:51:20 para Conversor de Numeros Romanos por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

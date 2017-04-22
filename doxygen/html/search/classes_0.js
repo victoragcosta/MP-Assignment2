@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tptabela',['tpTabela',['../structtpTabela.html',1,'']]]
+  ['tptabela',['TpTabela',['../structTpTabela.html',1,'']]]
 ];

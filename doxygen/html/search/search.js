@@ -7,11 +7,11 @@
 
 var indexSectionsWithContent =
 {
-  0: "acdfmrtv",
+  0: "acdfkmtv",
   1: "t",
-  2: "rt",
-  3: "cdfmt",
-  4: "av"
+  2: "c",
+  3: "cdfmtv",
+  4: "akv"
 };
 
 var indexSectionNames =

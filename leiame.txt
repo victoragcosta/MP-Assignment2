@@ -1,26 +1,59 @@
 ////////////////////////////////////////
 ///             Leia-me              ///
 ////////////////////////////////////////
+
+Link do Repositório:
+  https://github.com/victoragcosta/mp-trab2/
+
 Compilando:
-- Para compilar basta rodar o makefile dentro de src/ 
+  Para compilar basta rodar o makefile dentro de src/ 
   usando o comando make.
 
 Limpando o diretório:
-- make clean deleta os arquivos *.o dentro de src/obj/.
+  make clean deleta os arquivos *.o dentro de src/obj/.
 
-- make reset deleta o executável, os arquivos *.o dentro
+  make reset deleta o executável, os arquivos *.o dentro
   de src/obj/ e os arquivos para uso do gcov dentro de
-  src/gcov_files/ e copia teste.c e romanos.c para esse
-  diretório.
+  src/gcov_files/. Use isso antes de rodar fazer o teste
+  do gcov.
+
+Usando cppcheck:
+  cppcheck --enable=all conversor_romanos_teste.c
+  cppcheck --enable=all conversor_romanos.c
 
 Usando gcov:
-- make mv_gcov_files move os arquivos para uso do gcov
+  make mv_gcov_files move os arquivos para uso do gcov
   de dentro do diretório src/obj/ para src/gcov_files.
   Após isso, para usar o gcov, basta dar "cd gcov_files/"
-  e "gcov -a teste" e "gcov -a romanos". Dê importância
-  somente para o coverage de teste e romanos, os outros
-  módulos fazem parte do gtest. Se quiser observar linha
+  e "gcov -a conversor_romanos_teste" e "gcov -a conversor_romanos". 
+  Dê importância somente para o coverage de teste e romanos,
+  os outros módulos fazem parte do gtest. Se quiser observar linha
   a linha, faça "cat romanos.c.gcov | more" e "cat teste.c.gcov | more".
 
 Instalando gtest:
   https://www.eriksmistad.no/getting-started-with-google-test-on-ubuntu/
+
+
+
+
+
+                   ████████████████ 
+                 █████████████████████ 
+  █ █          ████████████████████████      █  █  █ 
+  █ █  █      ██████    ██████    ██████      █ █ █ 
+█ █ █ █      ██████      ████      ███████    █████ 
+ █████      ███████   █ █████  █  ████████ ███████ 
+ ████████  █████████    ██████    ██████████   ███ 
+    ██    ██████████████████████████████████    ██ 
+    █     ██████████████████████████████  ██   █ 
+     ████████  ████████████████████████  ██████ 
+          ███  ████████████████████████  ███ 
+           ███     ████████████████     ██ 
+            ██        ██████████       ██ 
+             ███                       █ 
+               ██    ███████████      █ 
+                ███     ███████████  █ 
+                   ███     ██████████ 
+                      █████  █████████ 
+                             ██████████ 
+                              █████████

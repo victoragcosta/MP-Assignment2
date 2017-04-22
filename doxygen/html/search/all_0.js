@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['algarismo',['algarismo',['../structtpTabela.html#ad70d0ec0b8fb12006c4de8c479d9f71a',1,'tpTabela']]]
+  ['algarismo',['algarismo',['../structTpTabela.html#a6661fa40bd0476e566aac2385e207d2d',1,'TpTabela']]]
 ];

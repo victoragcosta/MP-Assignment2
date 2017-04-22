@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['casoespecial',['casoEspecial',['../romanos_8c.html#a078d0d73b46e079d01df955ea2bee47c',1,'romanos.c']]],
-  ['converter',['converter',['../romanos_8c.html#a9b0233d136a48d74f97f81a6cdba3c62',1,'romanos.c']]],
-  ['criartabela',['criarTabela',['../romanos_8c.html#afca713551976b2d2371518b386c942ce',1,'romanos.c']]]
+  ['casoespecial',['CasoEspecial',['../conversor__romanos_8c.html#a7e205d170f71b8986017aa17e3f34707',1,'conversor_romanos.c']]],
+  ['converter',['Converter',['../conversor__romanos_8c.html#af7191b221057d95be0fac40f667669da',1,'conversor_romanos.c']]],
+  ['criartabela',['CriarTabela',['../conversor__romanos_8c.html#a207d674017dfa63b4a7ec1871911f8fa',1,'conversor_romanos.c']]]
 ];

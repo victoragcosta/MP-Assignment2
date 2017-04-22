@@ -4,8 +4,8 @@
 #include <string.h>
 #include "conversor_romanos.h"
 
-Tabela *kValores = NULL;  //decidi colocar como global para ler menos o arquivo
-int kTamanhoValores = CriarTabela(&kValores);  //guarda-se o tamanho
+Tabela *kValores = NULL;  /**<Armazena a Tabela que relaciona caracter romano com seu valor arábico.*/
+int kTamanhoValores = CriarTabela(&kValores);  /**<Armazena-se o tamanho da tabela para facilitar iteração.*/
 
 /** Converte os algarismos de romano para arábico.
   \param romano ponteiro para char (atuando como string) contendo o número romano que se deseja converter.

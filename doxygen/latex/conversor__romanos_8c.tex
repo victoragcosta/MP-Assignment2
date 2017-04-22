@@ -1,0 +1,257 @@
+\hypertarget{conversor__romanos_8c}{\section{Referência do Arquivo /mnt/c/\-Users/victo/\-One\-Drive -\/ Universidade de Brasília/\-Un\-B/\-M\-P/\-Trabalho 2 M\-P/mp-\/trab2/src/conversor\-\_\-romanos.c}
+\label{conversor__romanos_8c}\index{/mnt/c/\-Users/victo/\-One\-Drive -\/ Universidade de Brasília/\-Un\-B/\-M\-P/\-Trabalho 2 M\-P/mp-\/trab2/src/conversor\-\_\-romanos.\-c@{/mnt/c/\-Users/victo/\-One\-Drive -\/ Universidade de Brasília/\-Un\-B/\-M\-P/\-Trabalho 2 M\-P/mp-\/trab2/src/conversor\-\_\-romanos.\-c}}
+}
+
+
+Pacote de funções para Converter números romanos em arábicos.  
+
+
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}conversor\-\_\-romanos.\-h\char`\"{}}\\*
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{conversor__romanos_8c_af7191b221057d95be0fac40f667669da}{Converter} (char $\ast$romano)
+\begin{DoxyCompactList}\small\item\em Converte os algarismos de romano para arábico. \end{DoxyCompactList}\item 
+int \hyperlink{conversor__romanos_8c_a207d674017dfa63b4a7ec1871911f8fa}{Criar\-Tabela} (\hyperlink{structTpTabela}{Tabela} $\ast$$\ast$relacao)
+\begin{DoxyCompactList}\small\item\em Aloca em memória uma lista com as relações entre todos os algarismos romanos com arábicos. \end{DoxyCompactList}\item 
+void \hyperlink{conversor__romanos_8c_a298f6ef87ccd00e47e8acd41474e5eef}{Descobrir\-Tabela} (F\-I\-L\-E $\ast$fp, int maior\-\_\-num)
+\begin{DoxyCompactList}\small\item\em Essa função gera um arquivo .txt relacionando o algarismo romano com o valor dele. \end{DoxyCompactList}\item 
+int \hyperlink{conversor__romanos_8c_a32b3ed6c3ec6196a62c8fea5c1cb9790}{Fim\-Da\-String} (int posicao, char $\ast$romano)
+\begin{DoxyCompactList}\small\item\em Testa se o índice aponta para o fim da string. \end{DoxyCompactList}\item 
+int \hyperlink{conversor__romanos_8c_a7e205d170f71b8986017aa17e3f34707}{Caso\-Especial} (\hyperlink{structTpTabela}{Tabela} $\ast$relacao, int tamanho\-\_\-relacao, char atual, char proximo)
+\begin{DoxyCompactList}\small\item\em Testa se o caracter atual e o próximo formam um caso de subtração dos algarismos romanos. \end{DoxyCompactList}\item 
+int \hyperlink{conversor__romanos_8c_a404a63fb907ab151ced60365813f2f62}{Find\-Algarismo} (char algarismo, \hyperlink{structTpTabela}{Tabela} $\ast$relacao, int tamanho\-\_\-relacao)
+\begin{DoxyCompactList}\small\item\em Acha o valor correspondente ao algarismo romano passado. \end{DoxyCompactList}\item 
+int \hyperlink{conversor__romanos_8c_a152dda4505bb92ff445728b4006c5858}{Find\-Indice} (char algarismo, \hyperlink{structTpTabela}{Tabela} $\ast$relacao, int tamanho\-\_\-relacao)
+\begin{DoxyCompactList}\small\item\em Acha o valor correspondente ao algarismo romano passado. \end{DoxyCompactList}\item 
+int \hyperlink{conversor__romanos_8c_ad5f000f0c241026639558374ea97b00b}{Validar\-Numero\-Romano} (char $\ast$romano)
+\begin{DoxyCompactList}\small\item\em Analiza uma string de números romanos para ver se é válido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structTpTabela}{Tabela} $\ast$ \hyperlink{conversor__romanos_8c_a6b709955f14a5882ea62626a1b421697}{k\-Valores} = N\-U\-L\-L
+\begin{DoxyCompactList}\small\item\em Armazena a Tabela que relaciona caracter romano com seu valor arábico. \end{DoxyCompactList}\item 
+int \hyperlink{conversor__romanos_8c_a8cfd2c8e297786b4f33527bd79e8e937}{k\-Tamanho\-Valores} = \hyperlink{conversor__romanos_8c_a207d674017dfa63b4a7ec1871911f8fa}{Criar\-Tabela}(\&\hyperlink{conversor__romanos_8c_a6b709955f14a5882ea62626a1b421697}{k\-Valores})
+\begin{DoxyCompactList}\small\item\em Armazena-\/se o tamanho da tabela para facilitar iteração. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Pacote de funções para Converter números romanos em arábicos. 
+
+\subsection{Funções}
+\hypertarget{conversor__romanos_8c_a7e205d170f71b8986017aa17e3f34707}{\index{conversor\-\_\-romanos.\-c@{conversor\-\_\-romanos.\-c}!Caso\-Especial@{Caso\-Especial}}
+\index{Caso\-Especial@{Caso\-Especial}!conversor_romanos.c@{conversor\-\_\-romanos.\-c}}
+\subsubsection[{Caso\-Especial}]{\setlength{\rightskip}{0pt plus 5cm}int Caso\-Especial (
+\begin{DoxyParamCaption}
+\item[{{\bf Tabela} $\ast$}]{relacao, }
+\item[{int}]{tamanho\-\_\-relacao, }
+\item[{char}]{atual, }
+\item[{char}]{proximo}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos_8c_a7e205d170f71b8986017aa17e3f34707}
+
+
+Testa se o caracter atual e o próximo formam um caso de subtração dos algarismos romanos. 
+
+Checa se os dois algarismos consecutivos fazem um caso especial.
+
+Ele checa se o proximo tem valor maior que o anterior. 
+\begin{DoxyParams}{Parâmetros}
+{\em relacao} & A Tabela relacionando algarismos romanos com os valores deles. \\
+\hline
+{\em tamanho\-\_\-relacao} & Comprimento da Tabela. \\
+\hline
+{\em atual} & Caracter que vem antes. \\
+\hline
+{\em proximo} & Caracter que vem depois. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um inteiro representando verdadeiro ou falso. 
+\end{DoxyReturn}
+\hypertarget{conversor__romanos_8c_af7191b221057d95be0fac40f667669da}{\index{conversor\-\_\-romanos.\-c@{conversor\-\_\-romanos.\-c}!Converter@{Converter}}
+\index{Converter@{Converter}!conversor_romanos.c@{conversor\-\_\-romanos.\-c}}
+\subsubsection[{Converter}]{\setlength{\rightskip}{0pt plus 5cm}int Converter (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{romano}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos_8c_af7191b221057d95be0fac40f667669da}
+
+
+Converte os algarismos de romano para arábico. 
+
+Função que converte um número romano em arábico.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em romano} & ponteiro para char (atuando como string) contendo o número romano que se deseja converter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o valor inteiro do número romano. Retorna -\/1 se não for valor romano válido. Retorna 0 para string vazia. 
+\end{DoxyReturn}
+\hypertarget{conversor__romanos_8c_a207d674017dfa63b4a7ec1871911f8fa}{\index{conversor\-\_\-romanos.\-c@{conversor\-\_\-romanos.\-c}!Criar\-Tabela@{Criar\-Tabela}}
+\index{Criar\-Tabela@{Criar\-Tabela}!conversor_romanos.c@{conversor\-\_\-romanos.\-c}}
+\subsubsection[{Criar\-Tabela}]{\setlength{\rightskip}{0pt plus 5cm}int Criar\-Tabela (
+\begin{DoxyParamCaption}
+\item[{{\bf Tabela} $\ast$$\ast$}]{relacao}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos_8c_a207d674017dfa63b4a7ec1871911f8fa}
+
+
+Aloca em memória uma lista com as relações entre todos os algarismos romanos com arábicos. 
+
+Gera a tabela de relacionamentos romano arábico.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em relacao} & o endereço de memória de um ponteiro de Tabela. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o tamanho da Tabela criada. 
+\end{DoxyReturn}
+\hypertarget{conversor__romanos_8c_a298f6ef87ccd00e47e8acd41474e5eef}{\index{conversor\-\_\-romanos.\-c@{conversor\-\_\-romanos.\-c}!Descobrir\-Tabela@{Descobrir\-Tabela}}
+\index{Descobrir\-Tabela@{Descobrir\-Tabela}!conversor_romanos.c@{conversor\-\_\-romanos.\-c}}
+\subsubsection[{Descobrir\-Tabela}]{\setlength{\rightskip}{0pt plus 5cm}void Descobrir\-Tabela (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fp, }
+\item[{int}]{maior\-\_\-num}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos_8c_a298f6ef87ccd00e47e8acd41474e5eef}
+
+
+Essa função gera um arquivo .txt relacionando o algarismo romano com o valor dele. 
+
+Gera um .txt com as relações diretas de romano e arábico.
+
+Ele faz isso lendo a partir de uma Tabela com 3999 números romanos e achando os que contém apenas 1 letra, tendo assim o valor verdadeiro do algarismo romano. 
+\begin{DoxyParams}{Parâmetros}
+{\em fp} & Ponteiro para arquivo contendo o arquivo aberto com 3999 números romanos. \\
+\hline
+{\em maior\-\_\-num} & Valor inteiro dizendo qual o maior número a ser olhado na lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Nada. 
+\end{DoxyReturn}
+\hypertarget{conversor__romanos_8c_a32b3ed6c3ec6196a62c8fea5c1cb9790}{\index{conversor\-\_\-romanos.\-c@{conversor\-\_\-romanos.\-c}!Fim\-Da\-String@{Fim\-Da\-String}}
+\index{Fim\-Da\-String@{Fim\-Da\-String}!conversor_romanos.c@{conversor\-\_\-romanos.\-c}}
+\subsubsection[{Fim\-Da\-String}]{\setlength{\rightskip}{0pt plus 5cm}int Fim\-Da\-String (
+\begin{DoxyParamCaption}
+\item[{int}]{posicao, }
+\item[{char $\ast$}]{romano}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos_8c_a32b3ed6c3ec6196a62c8fea5c1cb9790}
+
+
+Testa se o índice aponta para o fim da string. 
+
+Checa se é índice é fim da string passada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em posicao} & Um valor inteiro representando o índice da string. \\
+\hline
+{\em romano} & Ponteiro para char atuando como uma string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um inteiro representando verdadeiro ou falso. 
+\end{DoxyReturn}
+\hypertarget{conversor__romanos_8c_a404a63fb907ab151ced60365813f2f62}{\index{conversor\-\_\-romanos.\-c@{conversor\-\_\-romanos.\-c}!Find\-Algarismo@{Find\-Algarismo}}
+\index{Find\-Algarismo@{Find\-Algarismo}!conversor_romanos.c@{conversor\-\_\-romanos.\-c}}
+\subsubsection[{Find\-Algarismo}]{\setlength{\rightskip}{0pt plus 5cm}int Find\-Algarismo (
+\begin{DoxyParamCaption}
+\item[{char}]{algarismo, }
+\item[{{\bf Tabela} $\ast$}]{relacao, }
+\item[{int}]{tamanho\-\_\-relacao}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos_8c_a404a63fb907ab151ced60365813f2f62}
+
+
+Acha o valor correspondente ao algarismo romano passado. 
+
+Acha a existencia do algarismo na tabela e retorna o valor correspondente.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em algarismo} & Algarismo da qual se quer o valor correspondente. \\
+\hline
+{\em relacao} & Tabela contendo as relações entre algarismo e valor. \\
+\hline
+{\em tamanho\-\_\-relacao} & Comprimento da Tabela relacional. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o valor do algarismo passado. Retorna -\/1 se não existir na Tabela. 
+\end{DoxyReturn}
+\hypertarget{conversor__romanos_8c_a152dda4505bb92ff445728b4006c5858}{\index{conversor\-\_\-romanos.\-c@{conversor\-\_\-romanos.\-c}!Find\-Indice@{Find\-Indice}}
+\index{Find\-Indice@{Find\-Indice}!conversor_romanos.c@{conversor\-\_\-romanos.\-c}}
+\subsubsection[{Find\-Indice}]{\setlength{\rightskip}{0pt plus 5cm}int Find\-Indice (
+\begin{DoxyParamCaption}
+\item[{char}]{algarismo, }
+\item[{{\bf Tabela} $\ast$}]{relacao, }
+\item[{int}]{tamanho\-\_\-relacao}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos_8c_a152dda4505bb92ff445728b4006c5858}
+
+
+Acha o valor correspondente ao algarismo romano passado. 
+
+Retorna o indice da posição do algarismo procurado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em algarismo} & Algarismo da qual se quer o indice da posição correspondente. \\
+\hline
+{\em relacao} & Tabela contendo as relações entre algarismo e valor. \\
+\hline
+{\em tamanho\-\_\-relacao} & Comprimento da Tabela relacional. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o indice da posição do algarismo passado na tabela. Retorna -\/1 se não existir na Tabela. 
+\end{DoxyReturn}
+\hypertarget{conversor__romanos_8c_ad5f000f0c241026639558374ea97b00b}{\index{conversor\-\_\-romanos.\-c@{conversor\-\_\-romanos.\-c}!Validar\-Numero\-Romano@{Validar\-Numero\-Romano}}
+\index{Validar\-Numero\-Romano@{Validar\-Numero\-Romano}!conversor_romanos.c@{conversor\-\_\-romanos.\-c}}
+\subsubsection[{Validar\-Numero\-Romano}]{\setlength{\rightskip}{0pt plus 5cm}int Validar\-Numero\-Romano (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{romano}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos_8c_ad5f000f0c241026639558374ea97b00b}
+
+
+Analiza uma string de números romanos para ver se é válido. 
+
+Confirma a validade do número romano.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em romano} & ponteiro para char representando uma string de um número romano. Tamanho máximo do vetor\-: 31. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 para romano válido, 0 para romano inválido. 
+\end{DoxyReturn}
+
+
+\subsection{Variáveis}
+\hypertarget{conversor__romanos_8c_a8cfd2c8e297786b4f33527bd79e8e937}{\index{conversor\-\_\-romanos.\-c@{conversor\-\_\-romanos.\-c}!k\-Tamanho\-Valores@{k\-Tamanho\-Valores}}
+\index{k\-Tamanho\-Valores@{k\-Tamanho\-Valores}!conversor_romanos.c@{conversor\-\_\-romanos.\-c}}
+\subsubsection[{k\-Tamanho\-Valores}]{\setlength{\rightskip}{0pt plus 5cm}int k\-Tamanho\-Valores = {\bf Criar\-Tabela}(\&{\bf k\-Valores})}}\label{conversor__romanos_8c_a8cfd2c8e297786b4f33527bd79e8e937}
+
+
+Armazena-\/se o tamanho da tabela para facilitar iteração. 
+
+\hypertarget{conversor__romanos_8c_a6b709955f14a5882ea62626a1b421697}{\index{conversor\-\_\-romanos.\-c@{conversor\-\_\-romanos.\-c}!k\-Valores@{k\-Valores}}
+\index{k\-Valores@{k\-Valores}!conversor_romanos.c@{conversor\-\_\-romanos.\-c}}
+\subsubsection[{k\-Valores}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tabela}$\ast$ k\-Valores = N\-U\-L\-L}}\label{conversor__romanos_8c_a6b709955f14a5882ea62626a1b421697}
+
+
+Armazena a Tabela que relaciona caracter romano com seu valor arábico. 
+

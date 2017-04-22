@@ -1,0 +1,188 @@
+\hypertarget{conversor__romanos__teste_8c}{\section{Referência do Arquivo /mnt/c/\-Users/victo/\-One\-Drive -\/ Universidade de Brasília/\-Un\-B/\-M\-P/\-Trabalho 2 M\-P/mp-\/trab2/src/conversor\-\_\-romanos\-\_\-teste.c}
+\label{conversor__romanos__teste_8c}\index{/mnt/c/\-Users/victo/\-One\-Drive -\/ Universidade de Brasília/\-Un\-B/\-M\-P/\-Trabalho 2 M\-P/mp-\/trab2/src/conversor\-\_\-romanos\-\_\-teste.\-c@{/mnt/c/\-Users/victo/\-One\-Drive -\/ Universidade de Brasília/\-Un\-B/\-M\-P/\-Trabalho 2 M\-P/mp-\/trab2/src/conversor\-\_\-romanos\-\_\-teste.\-c}}
+}
+
+
+Arquivo com a main e os testes a serem rodados.  
+
+
+{\ttfamily \#include \char`\"{}conversor\-\_\-romanos.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$gtest/gtest.\-h$>$}\\*
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{conversor__romanos__teste_8c_af69d72a91fd1b1066b4fad7442e97665}{T\-E\-S\-T} (\hyperlink{conversor__romanos_8c_af7191b221057d95be0fac40f667669da}{Converter}, Vazio)
+\begin{DoxyCompactList}\small\item\em Teste que testa a conversão de um número romano vazio para arábico. \end{DoxyCompactList}\item 
+\hyperlink{conversor__romanos__teste_8c_af14923f423eaa418291bd973bdfdbfb0}{T\-E\-S\-T} (\hyperlink{conversor__romanos_8c_af7191b221057d95be0fac40f667669da}{Converter}, Algarismo\-I)
+\begin{DoxyCompactList}\small\item\em Testa para todos os números somente com I. \end{DoxyCompactList}\item 
+\hyperlink{conversor__romanos__teste_8c_af04178aa48ece1cf6b725621b3220e0b}{T\-E\-S\-T} (\hyperlink{conversor__romanos_8c_af7191b221057d95be0fac40f667669da}{Converter}, Algarismo\-V)
+\begin{DoxyCompactList}\small\item\em Testa para a adição do algarismo V. \end{DoxyCompactList}\item 
+\hyperlink{conversor__romanos__teste_8c_a41c7d9c093b75e0e7c55775b4893e9af}{T\-E\-S\-T} (\hyperlink{conversor__romanos_8c_af7191b221057d95be0fac40f667669da}{Converter}, Caso\-Especial\-I\-V)
+\begin{DoxyCompactList}\small\item\em Testa o mecanismo de detecção de casos em que ocorre a subtração do valor. \end{DoxyCompactList}\item 
+\hyperlink{conversor__romanos__teste_8c_ab6410bfd93ad4f1d7fa9c1f5705ed446}{T\-E\-S\-T} (\hyperlink{conversor__romanos_8c_af7191b221057d95be0fac40f667669da}{Converter}, Numeros\-Com\-X)
+\begin{DoxyCompactList}\small\item\em Testa a capacidade de conversão de números com algarismos I, V e X. \end{DoxyCompactList}\item 
+\hyperlink{conversor__romanos__teste_8c_a335f6a7ced6647085d3ea1837d9c5871}{T\-E\-S\-T} (\hyperlink{conversor__romanos_8c_af7191b221057d95be0fac40f667669da}{Converter}, Numeros\-Com\-L)
+\begin{DoxyCompactList}\small\item\em Testa uma quantidade maior de números contendo I, V, X e L. \end{DoxyCompactList}\item 
+\hyperlink{conversor__romanos__teste_8c_ac2a764a021f90052ee84bb40dd80adde}{T\-E\-S\-T} (\hyperlink{conversor__romanos_8c_af7191b221057d95be0fac40f667669da}{Converter}, Todos)
+\begin{DoxyCompactList}\small\item\em Testa todos os números romanos até 3999. \end{DoxyCompactList}\item 
+\hyperlink{conversor__romanos__teste_8c_ae3c5edf553fe86f9692efd97981987f7}{T\-E\-S\-T} (\hyperlink{conversor__romanos_8c_af7191b221057d95be0fac40f667669da}{Converter}, Numeros\-Lower\-Case)
+\begin{DoxyCompactList}\small\item\em Testa com números válidos com letras maiúsculas ou minúsculas. \end{DoxyCompactList}\item 
+\hyperlink{conversor__romanos__teste_8c_a5af7ca9026c34be9fd3c593845434d24}{T\-E\-S\-T} (\hyperlink{conversor__romanos_8c_af7191b221057d95be0fac40f667669da}{Converter}, Invalidos)
+\begin{DoxyCompactList}\small\item\em Testa se a função retornará -\/1 para entradas inválidas. \end{DoxyCompactList}\item 
+int \hyperlink{conversor__romanos__teste_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função main que coloca os testes a funcionar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Arquivo com a main e os testes a serem rodados. 
+
+\subsection{Funções}
+\hypertarget{conversor__romanos__teste_8c_a0ddf1224851353fc92bfbff6f499fa97}{\index{conversor\-\_\-romanos\-\_\-teste.\-c@{conversor\-\_\-romanos\-\_\-teste.\-c}!main@{main}}
+\index{main@{main}!conversor_romanos_teste.c@{conversor\-\_\-romanos\-\_\-teste.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos__teste_8c_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+Função main que coloca os testes a funcionar. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em argc} & Inteiro com a quantidade de argumentos passados na prompt de comando. \\
+\hline
+{\em argv} & Vetor de ponteiro pra char contendo todos os argumentos passados pela prompt de comando. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inteiro retornando códigos de erro ou 0, quando for bem sucedido. 
+\end{DoxyReturn}
+\hypertarget{conversor__romanos__teste_8c_af69d72a91fd1b1066b4fad7442e97665}{\index{conversor\-\_\-romanos\-\_\-teste.\-c@{conversor\-\_\-romanos\-\_\-teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!conversor_romanos_teste.c@{conversor\-\_\-romanos\-\_\-teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Converter}}]{, }
+\item[{Vazio}]{}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos__teste_8c_af69d72a91fd1b1066b4fad7442e97665}
+
+
+Teste que testa a conversão de um número romano vazio para arábico. 
+
+A função deve retornar 0 para passar no teste. \hypertarget{conversor__romanos__teste_8c_af14923f423eaa418291bd973bdfdbfb0}{\index{conversor\-\_\-romanos\-\_\-teste.\-c@{conversor\-\_\-romanos\-\_\-teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!conversor_romanos_teste.c@{conversor\-\_\-romanos\-\_\-teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Converter}}]{, }
+\item[{Algarismo\-I}]{}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos__teste_8c_af14923f423eaa418291bd973bdfdbfb0}
+
+
+Testa para todos os números somente com I. 
+
+O teste pega os 3 primeiros números da tabela de todos os romanos e os testa. São eles I, I\-I e I\-I\-I. Para passar devem retornar 1, 2 e 3 respectivamente.
+
+O teste serve para ver a funcionalidade do mecanismo de soma dos valores da função converte. \hypertarget{conversor__romanos__teste_8c_af04178aa48ece1cf6b725621b3220e0b}{\index{conversor\-\_\-romanos\-\_\-teste.\-c@{conversor\-\_\-romanos\-\_\-teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!conversor_romanos_teste.c@{conversor\-\_\-romanos\-\_\-teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Converter}}]{, }
+\item[{Algarismo\-V}]{}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos__teste_8c_af04178aa48ece1cf6b725621b3220e0b}
+
+
+Testa para a adição do algarismo V. 
+
+Para passar a função Converter deve retornar 5.
+
+O teste objetiva observar os padrões de uma tabela de valores na função Converter, para facilitar em testes futuros a generalização. \hypertarget{conversor__romanos__teste_8c_a41c7d9c093b75e0e7c55775b4893e9af}{\index{conversor\-\_\-romanos\-\_\-teste.\-c@{conversor\-\_\-romanos\-\_\-teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!conversor_romanos_teste.c@{conversor\-\_\-romanos\-\_\-teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Converter}}]{, }
+\item[{Caso\-Especial\-I\-V}]{}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos__teste_8c_a41c7d9c093b75e0e7c55775b4893e9af}
+
+
+Testa o mecanismo de detecção de casos em que ocorre a subtração do valor. 
+
+Para passar a função Converter deve retornar 4.
+
+Esse teste vê testa a função Converter afim de ver a capacidade da função de fazer com o caso mais simples de subtração nos romanos. \hypertarget{conversor__romanos__teste_8c_ab6410bfd93ad4f1d7fa9c1f5705ed446}{\index{conversor\-\_\-romanos\-\_\-teste.\-c@{conversor\-\_\-romanos\-\_\-teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!conversor_romanos_teste.c@{conversor\-\_\-romanos\-\_\-teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Converter}}]{, }
+\item[{Numeros\-Com\-X}]{}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos__teste_8c_ab6410bfd93ad4f1d7fa9c1f5705ed446}
+
+
+Testa a capacidade de conversão de números com algarismos I, V e X. 
+
+Para passar deve retornar números iguais aos da tabela em numeros\-\_\-romanos.\-txt.
+
+Esse teste visou auxiliar no desenvolvimento de condicionais para uma lista relacional mais genérica, facilitando a expansão posterior. Ela também auxilia na generalização do caso especial de subtração. \hypertarget{conversor__romanos__teste_8c_a335f6a7ced6647085d3ea1837d9c5871}{\index{conversor\-\_\-romanos\-\_\-teste.\-c@{conversor\-\_\-romanos\-\_\-teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!conversor_romanos_teste.c@{conversor\-\_\-romanos\-\_\-teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Converter}}]{, }
+\item[{Numeros\-Com\-L}]{}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos__teste_8c_a335f6a7ced6647085d3ea1837d9c5871}
+
+
+Testa uma quantidade maior de números contendo I, V, X e L. 
+
+Para passar deve retornar números iguais aos da tabela em numeros\-\_\-romanos.\-txt.
+
+Esse teste visa auxiliar na expansão da tabela e também a verificar se o desenvolvimento de casos especiais estava conseguindo generalizar para outros números. \hypertarget{conversor__romanos__teste_8c_ac2a764a021f90052ee84bb40dd80adde}{\index{conversor\-\_\-romanos\-\_\-teste.\-c@{conversor\-\_\-romanos\-\_\-teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!conversor_romanos_teste.c@{conversor\-\_\-romanos\-\_\-teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Converter}}]{, }
+\item[{Todos}]{}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos__teste_8c_ac2a764a021f90052ee84bb40dd80adde}
+
+
+Testa todos os números romanos até 3999. 
+
+Para passar deve retornar números iguais aos da tabela em numeros\-\_\-romanos.\-txt.
+
+Este era o teste final para ver se a conversão realmente funcionava. Passando esse teste, basta desenvolver para tratar números inválidos. \hypertarget{conversor__romanos__teste_8c_ae3c5edf553fe86f9692efd97981987f7}{\index{conversor\-\_\-romanos\-\_\-teste.\-c@{conversor\-\_\-romanos\-\_\-teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!conversor_romanos_teste.c@{conversor\-\_\-romanos\-\_\-teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Converter}}]{, }
+\item[{Numeros\-Lower\-Case}]{}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos__teste_8c_ae3c5edf553fe86f9692efd97981987f7}
+
+
+Testa com números válidos com letras maiúsculas ou minúsculas. 
+
+Para passar basta converter corretamente ignorando a diferenciação entre maiúsculas e minúsculas.
+
+Este teste significa que a função se torna mais robusta e genérica, protegida. \hypertarget{conversor__romanos__teste_8c_a5af7ca9026c34be9fd3c593845434d24}{\index{conversor\-\_\-romanos\-\_\-teste.\-c@{conversor\-\_\-romanos\-\_\-teste.\-c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!conversor_romanos_teste.c@{conversor\-\_\-romanos\-\_\-teste.\-c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Converter}}]{, }
+\item[{Invalidos}]{}
+\end{DoxyParamCaption}
+)}}\label{conversor__romanos__teste_8c_a5af7ca9026c34be9fd3c593845434d24}
+
+
+Testa se a função retornará -\/1 para entradas inválidas. 
+
+Para passar basta retornar -\/1 para todas as entradas.
+
+Este teste garante que o programa seja mais robusto quanto as entradas da função converter. 

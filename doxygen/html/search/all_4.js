@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../teste_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'teste.c']]]
+  ['ktamanhovalores',['kTamanhoValores',['../conversor__romanos_8c.html#a8cfd2c8e297786b4f33527bd79e8e937',1,'conversor_romanos.c']]],
+  ['kvalores',['kValores',['../conversor__romanos_8c.html#a6b709955f14a5882ea62626a1b421697',1,'conversor_romanos.c']]]
 ];

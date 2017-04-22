@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Conversor de Numeros Romanos: Código-Fonte de /mnt/c/Users/victo/OneDrive - Universidade de Brasília/UnB/MP/Trabalho 2 MP/mp-trab2/include/conversor_romanos.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Conversor de Numeros Romanos
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Estruturas de Dados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">conversor_romanos.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MP_TRAB2_INCLUDE_CONVERSOR_ROMANOS_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MP_TRAB2_INCLUDE_CONVERSOR_ROMANOS_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structTpTabela.html">   14</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structTpTabela.html">TpTabela</a>{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structTpTabela.html#a748678cb9ccf8ac328b602de499bed84">   15</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structTpTabela.html#a748678cb9ccf8ac328b602de499bed84">valor</a>;        </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structTpTabela.html#a6661fa40bd0476e566aac2385e207d2d">   16</a></span>&#160;  <span class="keywordtype">char</span> <a class="code" href="structTpTabela.html#a6661fa40bd0476e566aac2385e207d2d">algarismo</a>;     </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}<a class="code" href="structTpTabela.html">Tabela</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">int</span> <a class="code" href="conversor__romanos_8c.html#af7191b221057d95be0fac40f667669da">Converter</a>(<span class="keywordtype">char</span> *romano);  </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">int</span> <a class="code" href="conversor__romanos_8c.html#a207d674017dfa63b4a7ec1871911f8fa">CriarTabela</a>(<a class="code" href="structTpTabela.html">Tabela</a> **relacao);  </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="conversor__romanos_8c.html#a298f6ef87ccd00e47e8acd41474e5eef">DescobrirTabela</a>(FILE *fp, <span class="keywordtype">int</span> maior_num);  </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">int</span> <a class="code" href="conversor__romanos_8c.html#a32b3ed6c3ec6196a62c8fea5c1cb9790">FimDaString</a>(<span class="keywordtype">int</span> posicao, <span class="keywordtype">char</span> *romano);  </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">int</span> <a class="code" href="conversor__romanos_8c.html#a7e205d170f71b8986017aa17e3f34707">CasoEspecial</a>(<a class="code" href="structTpTabela.html">Tabela</a>* relacao, <span class="keywordtype">int</span> tamanho_relacao, <span class="keywordtype">char</span> atual, <span class="keywordtype">char</span> proximo);  </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">int</span> <a class="code" href="conversor__romanos_8c.html#a404a63fb907ab151ced60365813f2f62">FindAlgarismo</a>(<span class="keywordtype">char</span> algarismo, <a class="code" href="structTpTabela.html">Tabela</a> *relacao, <span class="keywordtype">int</span> tamanho_relacao);  </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">int</span> <a class="code" href="conversor__romanos_8c.html#a152dda4505bb92ff445728b4006c5858">FindIndice</a>(<span class="keywordtype">char</span> algarismo, <a class="code" href="structTpTabela.html">Tabela</a> *relacao, <span class="keywordtype">int</span> tamanho_relacao);  </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">int</span> <a class="code" href="conversor__romanos_8c.html#ad5f000f0c241026639558374ea97b00b">ValidarNumeroRomano</a>(<span class="keywordtype">char</span> *romano);  </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="conversor__romanos_8c_html_ad5f000f0c241026639558374ea97b00b"><div class="ttname"><a href="conversor__romanos_8c.html#ad5f000f0c241026639558374ea97b00b">ValidarNumeroRomano</a></div><div class="ttdeci">int ValidarNumeroRomano(char *romano)</div><div class="ttdoc">Analiza uma string de números romanos para ver se é válido. </div><div class="ttdef"><b>Definition:</b> conversor_romanos.c:179</div></div>
+<div class="ttc" id="conversor__romanos_8c_html_a298f6ef87ccd00e47e8acd41474e5eef"><div class="ttname"><a href="conversor__romanos_8c.html#a298f6ef87ccd00e47e8acd41474e5eef">DescobrirTabela</a></div><div class="ttdeci">void DescobrirTabela(FILE *fp, int maior_num)</div><div class="ttdoc">Essa função gera um arquivo .txt relacionando o algarismo romano com o valor dele. </div><div class="ttdef"><b>Definition:</b> conversor_romanos.c:94</div></div>
+<div class="ttc" id="conversor__romanos_8c_html_a32b3ed6c3ec6196a62c8fea5c1cb9790"><div class="ttname"><a href="conversor__romanos_8c.html#a32b3ed6c3ec6196a62c8fea5c1cb9790">FimDaString</a></div><div class="ttdeci">int FimDaString(int posicao, char *romano)</div><div class="ttdoc">Testa se o índice aponta para o fim da string. </div><div class="ttdef"><b>Definition:</b> conversor_romanos.c:122</div></div>
+<div class="ttc" id="conversor__romanos_8c_html_a7e205d170f71b8986017aa17e3f34707"><div class="ttname"><a href="conversor__romanos_8c.html#a7e205d170f71b8986017aa17e3f34707">CasoEspecial</a></div><div class="ttdeci">int CasoEspecial(Tabela *relacao, int tamanho_relacao, char atual, char proximo)</div><div class="ttdoc">Testa se o caracter atual e o próximo formam um caso de subtração dos algarismos romanos. </div><div class="ttdef"><b>Definition:</b> conversor_romanos.c:133</div></div>
+<div class="ttc" id="conversor__romanos_8c_html_af7191b221057d95be0fac40f667669da"><div class="ttname"><a href="conversor__romanos_8c.html#af7191b221057d95be0fac40f667669da">Converter</a></div><div class="ttdeci">int Converter(char *romano)</div><div class="ttdoc">Converte os algarismos de romano para arábico. </div><div class="ttdef"><b>Definition:</b> conversor_romanos.c:14</div></div>
+<div class="ttc" id="structTpTabela_html"><div class="ttname"><a href="structTpTabela.html">TpTabela</a></div><div class="ttdoc">Uma estrutura para guardar as relações de valor entre algarismos romanos e arábicos. </div><div class="ttdef"><b>Definition:</b> conversor_romanos.h:14</div></div>
+<div class="ttc" id="conversor__romanos_8c_html_a152dda4505bb92ff445728b4006c5858"><div class="ttname"><a href="conversor__romanos_8c.html#a152dda4505bb92ff445728b4006c5858">FindIndice</a></div><div class="ttdeci">int FindIndice(char algarismo, Tabela *relacao, int tamanho_relacao)</div><div class="ttdoc">Acha o valor correspondente ao algarismo romano passado. </div><div class="ttdef"><b>Definition:</b> conversor_romanos.c:163</div></div>
+<div class="ttc" id="structTpTabela_html_a748678cb9ccf8ac328b602de499bed84"><div class="ttname"><a href="structTpTabela.html#a748678cb9ccf8ac328b602de499bed84">TpTabela::valor</a></div><div class="ttdeci">int valor</div><div class="ttdoc">Valor correspondente da notação arábica do algarismo romano. </div><div class="ttdef"><b>Definition:</b> conversor_romanos.h:15</div></div>
+<div class="ttc" id="conversor__romanos_8c_html_a207d674017dfa63b4a7ec1871911f8fa"><div class="ttname"><a href="conversor__romanos_8c.html#a207d674017dfa63b4a7ec1871911f8fa">CriarTabela</a></div><div class="ttdeci">int CriarTabela(Tabela **relacao)</div><div class="ttdoc">Aloca em memória uma lista com as relações entre todos os algarismos romanos com arábicos. </div><div class="ttdef"><b>Definition:</b> conversor_romanos.c:43</div></div>
+<div class="ttc" id="structTpTabela_html_a6661fa40bd0476e566aac2385e207d2d"><div class="ttname"><a href="structTpTabela.html#a6661fa40bd0476e566aac2385e207d2d">TpTabela::algarismo</a></div><div class="ttdeci">char algarismo</div><div class="ttdoc">Algarismo romano. </div><div class="ttdef"><b>Definition:</b> conversor_romanos.h:16</div></div>
+<div class="ttc" id="conversor__romanos_8c_html_a404a63fb907ab151ced60365813f2f62"><div class="ttname"><a href="conversor__romanos_8c.html#a404a63fb907ab151ced60365813f2f62">FindAlgarismo</a></div><div class="ttdeci">int FindAlgarismo(char algarismo, Tabela *relacao, int tamanho_relacao)</div><div class="ttdoc">Acha o valor correspondente ao algarismo romano passado. </div><div class="ttdef"><b>Definition:</b> conversor_romanos.c:146</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sábado, 22 de Abril de 2017 02:51:20 para Conversor de Numeros Romanos por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
